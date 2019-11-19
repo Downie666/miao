@@ -26,11 +26,7 @@
       <a href="http://www.jd.com" target="_blank">在新窗口打开京东</a>
       <a href="mailto:Tony215660657@163.com">点击给我发邮件</a>
       <a href="#bottom">跳转到本页的底部</a>
-      <a
-        href="001.jpg"
-        download
-        >点我可以下载一个文件</a
-      ><br />
+      <a href="001.jpg" download>点我可以下载一个文件</a><br />
       <img src="001.jpg" alt="" />
       <hr />
       <hr />
@@ -163,6 +159,73 @@
           <button>重置</button>
         </dl>
       </form>
+      <hr />
+      <table border="1">
+        <!-- caption  标题 -->
+        <caption>
+          货品列表
+        </caption>
+        <col>
+        <col bgcolor="red">
+        <col>
+        <col>
+        <thead>
+          <tr>
+            <!-- th可用作表头  字体默认加粗、居中 但是内容不居中 -->
+            <th>编号</th>
+            <th>品名</th>
+            <th>进价</th>
+            <th>出价</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- td代表 行  表格中的文字是垂直居中 默认居左的-->
+            <!-- colspan 跨列   rowspan 跨行 cellspacing 合并-->
+            <th>001</th>
+            <td>苹果</td>
+            <td rowspan="2">5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>001</th>
+            <td>桔子</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>001</th>
+            <td>香蕉</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>001</th>
+            <td>山竹</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+        </tfoot>
+      </table>
+      <hr>
+      <img title="杨戬-永曜之星" src="001.jpg" alt="" width="200" height="200" usemap="#yangjian">
+      <map name="yangjian">
+        <!-- 圆形 -->
+        <area shape="circle" coords="133,107,60" href="" target="_blank" title="杨戬">
+        <!-- 矩形  指定左上角  右上角的坐标-->
+        <area shape="rect" coords="14,144,77,250" href="https://www.baidu.com" target="_blank" title="juxing" alt="">
+        <!-- 多边形 -->
+        <area shape="poly" coords="22,66,50,41,98,65,97,141,105,245"title="duobianxing" href="" alt="">
+      </map>
+      <hr>
+      <a href="https://www.mi.com" target="frame1">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a><br>
+      <iframe src="https://nodejs.org" name="frame1" frameborder="1">#document
+      </iframe>
+      <p>
+        怎样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这两个字之间空这么大呢？<br>怎样在页面中显示下面的内容呢?<br>
+        &lt;span>&lt;/span>
+      </p>
     </div>
     <div>
       <p id="bottom"></p>
