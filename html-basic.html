@@ -47,9 +47,11 @@
       <p>下面是一段javascript代码，最合适用何种标签来表示呢？</p>
       <!-- pre 预格式化 -->
       <pre>
+        <code>
           function a(){
               return 8;
           }
+        </code>
       </pre>
       <hr />
       <ul>
@@ -92,13 +94,13 @@
         <dl>
           <dt>性别</dt>
           <dd>
-            <label for=""
-              >男
-              <input type="radio" value="男" />
+            <label for="male"
+              >
+              <input type="radio" name="gender" value="male" />男
             </label>
-            <label for=""
-              >女
-              <input type="radio" value="女" />
+            <label for="formale"
+              >
+              <input type="radio" name="gender" value="formale" />女
             </label>
           </dd>
           <dt>年龄</dt>
@@ -121,43 +123,39 @@
           </dd>
           <dt>生日</dt>
           <dd>
-            <input type="date" name="" id="" />
+            <input type="date" name="birthday" id="" />
           </dd>
           <dt>生辰</dt>
           <dd>
-            <input type="time" />
+            <input type="datetime" name="birthdate"/>
           </dd>
           <dt>照片</dt>
           <dd>
-            <label
-              >点我上传照片，我比照片更好看
-              <input type="file" hidden />
+            <label>
+              <input type="file" hidden name="avatar" />
+              点我上传照片，我比照片更好看
             </label>
           </dd>
           <dt>肤色</dt>
           <dd>
-            <input type="color" />
+            <input type="color" name="skin color"/>
           </dd>
           <dt>自我介绍</dt>
           <dd>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="my name is Downie"
-            ></textarea>
+            <textarea name="selfintro" cols="30" rows="10">&lt;/textarea>
+            </textarea>
           </dd>
-          <fieldset disabled>
-            <legend>这里面全都禁用了</legend>
+        </dl>  
+        <fieldset disabled>
+          <legend>这里面全都禁用了
+            </legend>
             <input type="text" />
             <input type="text" />
             <input type="text" /><br />
             <input type="text" />
-          </fieldset>
-          <button>提交</button>
-          <button>重置</button>
-        </dl>
+        </fieldset>
+        <button>提交</button>
+        <button>重置</button>
       </form>
       <hr />
       <table border="1">
@@ -165,13 +163,14 @@
         <caption>
           货品列表
         </caption>
+        <!-- <col bgcolor=""> 使一列变为需要的颜色 -->
         <col>
         <col bgcolor="red">
         <col>
         <col>
         <thead>
           <tr>
-            <!-- th可用作表头  字体默认加粗、居中 但是内容不居中 -->
+            <!--tr代表行  td代表列 th可用作表头  字体默认加粗、居中 但是内容不居中 -->
             <th>编号</th>
             <th>品名</th>
             <th>进价</th>
@@ -180,7 +179,7 @@
         </thead>
         <tbody>
           <tr>
-            <!-- td代表 行  表格中的文字是垂直居中 默认居左的-->
+            <!-- td表格中的文字是垂直居中 默认居左的-->
             <!-- colspan 跨列   rowspan 跨行 cellspacing 合并-->
             <th>001</th>
             <td>苹果</td>
