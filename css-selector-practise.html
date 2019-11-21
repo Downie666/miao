@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Document</title>
     <style>
       /* YOUR STYLE GOES HERE */
       /* 不得改变页面的任何html结构 */
-      body>:first-child{
+      body > :first-child {
         color: red;
       }
-      p.a:hover{
+      p.a:hover {
         color: red;
       }
       p.a:active {
         color: green;
       }
-      .a:focus{
+      .a:focus {
         color: blue;
       }
-      p.a.c span{
+      p.a.c span {
         color: red;
       }
-      p.a.c span > span{
+      p.a.c span > span {
         color: green;
       }
-      p.a.c span > span:nth-child(2){
+      p.a.c span > span:nth-child(2) {
         color: blue;
       }
-      a:visited{
+      a:visited {
         color: orange;
       }
-      a:link{
+      a:link {
         color: pink;
       }
       a[href^="mailto:" i] {
@@ -43,33 +43,32 @@
         font-size: 30px;
       }
       /*.a li:nth-child(n+4):nth-last-child(n+9) */
-      .a li:nth-child(n+4):nth-child(-n+7){
+      .a li:nth-child(n + 4):nth-child(-n + 7) {
         color: red;
       }
-      .b li:nth-last-child(n+76)
-      {
+      .b li:nth-last-child(n + 76) {
         color: red;
       }
-      .b li:nth-child(n+65){
+      .b li:nth-child(n + 65) {
         color: green;
       }
       /*li:nth-child(n+35):nth-last-child(n+51) */
-      .b li:nth-child(n+35):nth-child(-n+50){
+      .b li:nth-child(n + 35):nth-child(-n + 50) {
         color: blue;
       }
-      .prime li:first-child{
-        color: blueviolet;
+      .prime li:first-child {
+        color: purple;
       }
-      .prime li:nth-child(2n+4){
+      .prime li:nth-child(2n + 4) {
         color: cyan;
       }
-      .prime li:nth-child(3n+6){
+      .prime li:nth-child(3n + 6) {
         color: cyan;
       }
-      .prime li:nth-child(5n+10){
+      .prime li:nth-child(5n + 10) {
         color: cyan;
       }
-      .prime li:nth-child(7n+14){
+      .prime li:nth-child(7n + 14) {
         color: cyan;
       }
     </style>
@@ -78,7 +77,9 @@
   <body>
     <p>红色</p>
 
-    <p class="a" tabindex="-1">鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
+    <p class="a" tabindex="-1">
+      鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色
+    </p>
 
     <p class="a c">
       <span>
@@ -90,12 +91,11 @@
 
     <div>
       <p>
-        如下：
-        让已访问的链接为橙色（orange） <br>
-        让未访问的链接为粉色（pink） <br>
-        让所有邮件的链接为蓝色 <br>
-        播打电话的链接为黄色<br>
-        下载pdf的链接字号为30px<br>
+        如下： 让已访问的链接为橙色（orange） <br />
+        让未访问的链接为粉色（pink） <br />
+        让所有邮件的链接为蓝色 <br />
+        播打电话的链接为黄色<br />
+        下载pdf的链接字号为30px<br />
       </p>
       <a href="https://www.mi.com/">mi</a>
       <a href="https://www.jd.com/">jd</a>
@@ -129,7 +129,7 @@
       </ul>
     </div>
 
-    <hr>
+    <hr />
 
     <div class="b">
       <p>让25及以内的元素为红色</p>
@@ -239,10 +239,12 @@
       </ul>
     </div>
 
-    <hr>
+    <hr />
 
     <div class="prime">
-      <p>让所有的质/素数(prime)（2，3，5，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
+      <p>
+        让所有的质/素数(prime)（2，3，5，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色
+      </p>
       nth-child(3n)
       <ul>
         <li>01</li>
