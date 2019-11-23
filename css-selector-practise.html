@@ -2,29 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Refresh" content="1" />   <!-- 重定向 -->
     <title>Document</title>
     <style>
       /* YOUR STYLE GOES HERE */
       /* 不得改变页面的任何html结构 */
-      body > :first-child {
+      body > p:first-child {
         color: red;
       }
-      p.a:hover {
-        color: red;
-      }
-      p.a:active {
-        color: green;
-      }
-      .a:focus {
+      p[class="a"]:focus {
         color: blue;
       }
-      p.a.c span {
+      p[class="a"]:hover {
+        color: red;
+      } 
+      p[class="a"]:active {
+        color: green; 
+      }
+
+      .a.c span {
         color: red;
       }
-      p.a.c span > span {
+      /* a.c span span:first-child */
+      .a.c span > span {
         color: green;
       }
-      p.a.c span > span:nth-child(2) {
+      /* a.c span span */
+      .a.c span > span:nth-child(2) {
         color: blue;
       }
       a:visited {
@@ -46,9 +50,6 @@
       .a li:nth-child(n + 4):nth-child(-n + 7) {
         color: red;
       }
-      .a li:nth-child(n + 11):nth-last-child(n + 4) {
-        color: red;
-      }
       .b li:nth-last-child(n + 76) {
         color: red;
       }
@@ -60,7 +61,7 @@
         color: blue;
       }
       .prime li:first-child {
-        color: purple;
+        color: blueviolet;
       }
       .prime li:nth-child(2n + 4) {
         color: cyan;
