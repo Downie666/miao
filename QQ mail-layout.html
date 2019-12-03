@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* 第一种calc布局 */
+    /* 加上vertical-align：top使他们不受文字大小的影响 */
+    /*
+    *{
+        background-color: rgba(0,0,0,0.1);
+    }
+    html,body{
+        margin: 0;
+        height: 100%;
+    }
+    div{
+        height: 100%;
+        font-size: 0;
+    }
+    div > *{
+        display: inline-block;
+        font-size: 16px;
+        vertical-align: top;
+    }
+    header{
+        height:100px;
+        width: 100%; 
+        background-color: red;
+    }
+    aside,main{
+        height:calc(100% - 100px);
+        
+    }
+    aside{
+        width: 150px;
+        background-color: lime;
+    }
+    main{
+        width: calc(100% - 150px);
+        background-color: aqua;
+    }
+     */
+    /* 第二种使用定位  margin布局
+    此类型只适用于满屏 */
+    *{
+        background-color: rgba(0,0,0,0.1);
+    }
+    html,body{
+        margin: 0;
+        height: 100%;
+    }
+    header{
+        height: 100px;
+        width: 100%;
+        background-color:red;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    aside{
+        position: fixed;
+        width: 150px;
+        top: 100px;
+        bottom:0;
+        background-color: lime;
+    }
+    main{
+        position: fixed;
+        background-color: magenta;
+        top: 100px;
+        bottom: 0;
+        right: 0;
+        left: 150px;
+    }
+    /* 将aside删掉看不到 因为定位元素会盖掉常规元素 */
+    </style>
+</head>
+<body>
+    <div>
+        <header>a</header>
+        <aside>b</aside>
+        <main>c</main>
+    </div>
+</body>
+</html>
