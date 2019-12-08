@@ -17,10 +17,83 @@
     justify-content: center;
 }
     </style>
+    <style>
+            html {
+              font-size: 20px;
+            }
+            section {
+              font-size: 10rem;
+            }
+            p {
+              font-size: 24px;
+            }
+            span {
+              font-size: 150%;
+            }
+            .sucks {
+              font-size: inherit;
+            }
+          </style>
 </head>
 <body>
     <div class="vertical-container">
         <div>css里总算是有了一种简单的垂直居中布局的方法了</div>
     </div>
+    <img src="" alt="">
+
+    
+          <body>
+            <section>
+              <h2>Brown</h2>
+              <p>quick</p>
+              <p>jumps <span>over <span>lazy</span> dog</span></p>
+              <p class="sucks">sucks</p>
+            </section>
+          </body>
+
+
+
+          <table border=1>
+            <caption>美国队长</caption>
+            <col>
+            <col bgcolor=red>
+            <col>
+            <colgroup bgcolor=pink>
+              <col>
+              <col>
+              <col bgcolor=brown>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>01</th>
+                <th>02</th>
+                <th>03</th>
+                <th>04</th>
+                <th>05</th>
+                <th>06</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>abc</td>
+                <td colspan=3 rowspan=2>abc</td>
+                <td>abc</td>
+                <td>abc</td>
+              </tr>
+              <tr>
+                <td>abc</td>
+                <td colspan=2 rowspan=3>abc</td>
+              </tr>
+              <tr bgcolor=lightgreen>
+                <td colspan=2 rowspan=2>abc</td>
+                <td>abc</td>
+                <td>abc</td>
+              </tr>
+              <tr>
+                <td>abc</td>
+                <td>abc</td>
+              </tr>
+            </tbody>
+          </table> 
 </body>
 </html>

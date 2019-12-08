@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width =device-width , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+    *{
+        background-color: rgba(0,0,0,0.1);
+    }
+    
+    .wrap{
+        background-color: #2064c8;
+        color: white;
+    }
+    nav{
+        width: 1200px;
+        /* 让nav居中 */
+        margin: auto;
+    }
+    /* 这里面的ul */
+    ul{
+        list-style: none;
+        padding: 0;
+        /* 行内元素之间有间隙 所以要调为0 它的子元素得设置一个大小 */
+        font-size: 0;
+    }
+    /* 让ul里的li横着排列 display */
+    li{ 
+        font-size: 12px;
+        display: inline-block;
+        /* 加间隙10像素 */
+        padding: 10px;
+        /* 加边框线 */
+        border-left: 1px solid #3774ce;
+        position: relative;
+    }
+    /* 选中最后一个li元素 加一条右边框线*/
+    li:last-child{
+        border-right: 1px solid #3774ce;
+    }
+    /* 选中li的第三个元素 */
+/* 选中有[data-tip]的元素 */
+    li[data-tip]::before{
+        /* content:'低价促'; */
+        content: attr(data-tip);
+        /* li元素自身得定位 */
+        position: absolute;
+        background-color: #ff8e00;
+        /* 浏览器字体最小为12px */
+        font-size: 8px;
+        left: 42px;
+        /* top:-6px; */
+        bottom: 30px;
+        /* 不用定宽 让字把它撑宽 不折行*/
+        white-space: nowrap;
+        /* 为了挡住border线 */
+        z-index: 10;
+    }
+    li[data-tip]::after{
+        content: "";
+        position: absolute;
+        z-index: 10;
+        /* 边框大小  */
+        border: 4px solid #ff8e00;
+        /* 画边框  画成三角形  上边有颜色 右边透明*/
+        border-color: #ff8e00 transparent transparent #ff8e00;
+        bottom: 23px;
+    }
+    /* 第四个可以沿用上面这种方法，也可以使用data-tip */
+
+    /* 伪元素不能hover，只跟跟随父元素hover
+    li[data-tip]:hover::before */
+
+
+    伪元素：
+    相当于所属元素的第一个和最后一个元素，所有替换元素一般没有伪元素
+    通过xxx::before,xxx::after选中
+    通过content属性激活：content属性可以写字符串，可以写attr（href）使其取父元素的属性值
+    伪元素选择器与普通选择器不需要对比优先级，因为选中的一定不是相同的元素
+    伪元素无法交互，如hover，只能在父元素发生css交互时切换对应伪元素的样式
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <ul>
+                <li>首页</li>
+                <li>海外酒店</li>
+                <li data-tip="低价促">火车票</li>
+                <li data-tip="新升级">汽车票</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

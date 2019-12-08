@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-    /* 第一种  绝对定位+负外边距
+      /* 第一种  绝对定位+负外边距
     #box{
         width: 300px;
         height: 300px;
@@ -21,7 +21,7 @@
         top:50%;
         margin: -15% 0 0 0;
     } */
-    /* 第二种绝对定位结合margin:auto
+      /* 第二种绝对定位结合margin:auto
     #box{
         width: 300px;
         height: 300px;
@@ -38,7 +38,7 @@
         margin:auto;
         line-height: 100px;
     } */
-    /* 第三种使用padding实现子元素的垂直居中 
+      /* 第三种使用padding实现子元素的垂直居中 
     #box {
     width: 300px;
     background: #ddd;
@@ -49,9 +49,8 @@
     height: 100px;
     background: orange;
     }*/
-   
 
-    /*四、line-height居中
+      /*四、line-height居中
      #box{
         width: 300px;
         height: 300px;
@@ -59,7 +58,7 @@
         line-height: 300px;
     }
  */
-    /* 五、
+      /* 五、
     #box{
         width: 300px;
         height: 300px;
@@ -71,12 +70,66 @@
         height: 200px;
         vertical-align: middle;
     } */
+      /* 六、 */
+      /* main {
+        width: 500px;
+        height: 500px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      header {
+        width: 50%;
+        margin: auto;
+      }
+      div {
+        display: table;
+        width: 100%;
+      }
+      .a,
+      .b,
+      .c {
+        display: table-cell;
+        width: 100%;
+      }
+      .a {
+          background-color:red;
+          width: 200px;
+      }
+      .c{
+          width: 150px;
+      } */
+
+      .span1{
+        width: 200px;
+        height: 200px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background-color: green;
+      }
+      .span2{
+        width: 50%;
+        /* display: inline-block; */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="box">
-        <!-- <img src="./001.jpg" alt=""> -->
-        <div id="child">test vertical align</div>
+      <!-- < img src="./001.jpg" alt=""> -->
+      <div id="child">test vertical align</div>
     </div>
-</body>
+
+    <span class="span1">gjsklg
+      <span class="span2">lgksglsdgjlsk</span>
+    </span>
+ 
+    <main>
+      <header>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sed repudiandae officia quasi tempora, facilis molestiae. Quisquam reiciendis, ducimus molestiae distinctio minima autem perspiciatis libero nemo labore ipsum, blanditiis non!</header>
+    </main>
+    <div>
+      <section class="a"></section>
+      <section class="b"></section>
+      <section class="c">f</section>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        transition: 1s;
+        opacity: 0;
+        }
+      input[type="radio"]:checked + img{
+          left:0;
+          opacity: 1;
+      }
+    
+    </style>
+</head>
+<body>
+        <input type="radio" name="radio" id="rd-radio" /><img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/17995511aa691be2679e8d5e3e85bd8d.jpg?w=2452&h=920"
+      alt=""
+    />
+    <input type="radio" name="radio" id="rd-radio"/><img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e52c3e98602b90f198ec316dce253cba.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+      alt=""
+    />
+    <input type="radio" name="radio" id="rd-radio"/><img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/05bc8af40fc9f9941808d253034c279d.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+      alt=""
+    />
+</body>
+</html>

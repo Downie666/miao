@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        background-color: rgba(0,0,0,0.1);
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        color:white;
+    }
+    ul li{
+        position: relative;
+        /* 不折行 */
+        white-space: nowrap;
+        /* 第一层背景颜色 */
+        background-color: #3c3c3c;
+    }
+    ul.menu > li{
+        display:inline-block;
+        /* 间隙为10px */
+        padding: 10px;
+    }
+    ul.menu ul li{
+        padding:10px 20px;
+    }
+     ul.menu ul li:hover{
+         background-color: #094771;
+     }
+    ul ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    ul ul ul{
+        top: 0%;
+        left: 100%;
+    }
+    li:hover > ul{
+        display: block;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>文件
+            <ul>
+                <li>保存</li>
+                <li>另存为</li>
+                <li>退出
+                    <ul>
+                        <li>保存</li>
+                        <li>另存为</li>
+                        <li>退出</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>文件
+            <ul>
+                <li>保存</li>
+                <li>另存为</li>
+                <li>退出</li>
+            </ul>
+        </li>
+        <li>文件
+            <ul>
+                <li>保存</li>
+                <li>另存为</li>
+                <li>退出</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
