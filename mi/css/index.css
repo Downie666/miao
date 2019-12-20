@@ -1,0 +1,565 @@
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    overflow-y: scroll;
+}
+
+*{
+    background-color: rgba(0,0,0,0.1);
+}
+@font-face {  /* 声明字体 */
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?8qhwk5');
+    src:  url('../fonts/icomoon.eot?8qhwk5#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?8qhwk5') format('truetype'),
+      url('../fonts/icomoon.woff?8qhwk5') format('woff'),
+      url('../fonts/icomoon.svg?8qhwk5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+a{
+    text-decoration: none;
+}
+ul ,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 导航栏颜色为#333333 */
+.topbar{
+    background-color: #333333;
+    height: 40px;
+}
+
+/*版心为1226px  */
+.topbar .container{
+    width: 1226px;
+    /* 整体样式都是居中的 */
+    margin: 0 auto;
+    /* height: 100%; */
+}
+
+/* .topbar的.topbar-list（导航菜单）左浮动 */
+.topbar .topbar-list{
+    float: left;
+}
+/*a作为span的父元素 加一个相对定位 */
+.topbar .download{
+    position: relative;
+}
+
+/* 添加二维码图片 */
+.topbar .download .appcode img{
+    display: block;
+    margin: 18px auto 12px;
+}
+/* 给span绝对定位 并设置样式 */
+.topbar .download .appcode {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 124px;
+    height: 0;
+    background: #fff;
+    margin-left: -55px;
+    box-shadow: 0 1px 5px #aaa;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    overflow: hidden;
+    transition: height .3s;
+    z-index: 1;
+}
+/* 给a设置hover */
+.topbar .download:hover .appcode{
+    width: 124px;
+    height: 150px;
+}
+
+/* 画2伪类三角形  */
+.topbar .download::before {
+    content: "";
+    border: 8px solid white;
+    border-color: transparent transparent transparent transparent;
+    position: absolute;
+    top: 11px;
+    left: 13px;
+}
+/* 给a:hover之后before */
+.topbar .download:hover::before{
+    border-color: transparent transparent white transparent;
+}
+
+
+
+
+/* .topbar的.cart（购物车）右浮动 */
+.topbar .cart{
+    float: right;
+    /* 给购物车添加盒子 使里面的内容垂直居中 水平居中*/
+    height: 40px;
+    /* 水平居中 */
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 40px;
+    /* 与左边的元素拉开15个像素 */
+    margin-left: 15px;
+    /* 使这个盒子更宽一些 */
+    width: 120px;
+    background-color: #424242;
+}
+
+
+.topbar .iconfont-cart{
+    /* 去除斜体 */
+    font-style: normal;
+}
+/* 给购物车添加伪类 */
+/* .topbar .iconfont-cart::before{
+    content: "\E60C";
+} */
+/* 购物车图标 */
+.topbar .iconfont-cart{
+	font-family: "icomoon";
+	font-style: normal;  /* 让倾斜的不倾斜 */
+    color: #ABAFB0;
+}
+/* 让购物车的宽度和父元素一样宽 */
+.topbar .cart .iconfont-cart{
+    display: block;
+    width: 120px;
+}
+/* 购物车添加hover */
+.topbar .cart .iconfont-cart:hover{
+    color: #ff8400;
+    background-color: #fff;
+}
+/* 添加相对定位 */
+.topbar .cart{
+    position: relative;
+}
+/* 给购物车后面套一个购物框 */
+.topbar .cart-add{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 32;
+    width: 316px;
+    height: 0;
+    color: #424242;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+    overflow: hidden;
+    transition: height .3s;
+    /* padding: 0; */
+    line-height: 40px; 
+    font-size: 12px;
+
+}
+/* 伪类垂直居中 */
+.cart-add::before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+}
+.topbar .cart:hover .cart-add {
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+}
+
+/* .topbar的.login(用户) 右浮动*/
+.topbar .login{
+    float: right;
+}
+
+/* .bartop 下面的a元素 */
+.topbar a{
+    color: #b0b0b0;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+/* .topbar 下面的span */
+.topbar span{
+    color:#424242;
+    /* 外边距按12px等比缩放 */
+    margin: .3em;
+}
+/* 被hover的.topbar里面的a 颜色为#fff */
+.topbar a:hover{
+    color: #fff;
+}
+
+
+/*********************************************************************顶部栏结束*************************************************************************************************/
+
+
+
+
+
+/* /****************************************************************导航栏开始***************************************************************************************************/
+/* 小米导航栏 */
+.nav{
+    width: 1226px;
+    margin: auto;
+    height: 100px;
+    font-size: 16px;
+    background-color: #fff;
+}
+/* 添加浮动  使块元素的margin高度为22px */
+.nav .logo{
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+}
+/* 小米mi-logo */
+.mi-logo{
+    float: left;
+    position: relative;
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-color: #ff8400;
+    overflow: hidden;
+  
+} 
+
+/* 在a之前添加伪元素 */
+.mi-logo::before{
+    display: block;
+    width: 55px;
+    height: 55px;
+    content: "";
+    background-image: url(../img/mi-logo.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition:all .2s;
+}
+.mi-logo:hover::before{
+    margin-left: 55px;
+}
+/* 在a之后添加伪元素 */
+.mi-logo::after{
+    display: block;
+    width: 55px;
+    height: 55px;
+    content: "";
+    background-image: url(../img/mi-home.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* 往左边移出边框55像素 */
+    margin-left: -55px;
+    margin-top: -102px;
+}
+/* 给logo一个hover */
+.mi-logo:hover::after{
+    margin-left: 0px;
+}
+
+
+
+/* 小米第二导航栏 */
+.nav .categories{
+    height: 100px;
+    float: left;
+}
+.nav-wrapper{
+    position: relative;
+}
+.nav .list-item{
+    float: left;
+    height: 100px;
+}
+/* a元素行高为100 */
+.nav .list-item a{
+    height: 100px;
+    line-height: 100px;
+    padding: 0px 10px;
+}
+.nav .list-item a:hover{
+    color: #ff7400;
+}
+/* ul距离logo  180像素 */
+.nav .categories{
+    margin-left: 180px;
+}
+/* 第二个ul标签距离为0 */
+.nav .list2{
+    margin-left: 0;
+}
+
+.nav .submenu{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    overflow:hidden;
+    transition: 1s;
+    background-color: white;
+    height: 0;
+    z-index: 3;
+}
+.nav .nav-category{
+    width: 1226px;
+    margin: auto;
+    display: flex;
+}
+.nav .nav-category li{
+    margin: 30px 0px;
+    margin-right: 40px;
+
+}
+.nav .nav-category span{
+    display: block;
+    margin-top: -45px;
+    text-align: center;
+}
+/* nav 下ul中li的hover之后的div */
+.nav .categories li:hover .submenu{
+    height: 230px;
+    background-color: white;
+}
+
+ .nav-category{
+   margin: 0;
+   padding: 0;
+}
+
+
+
+
+
+
+
+/* 小米搜索框 */
+.nav .site-search{
+    float: right;
+    width: 296px;
+    /* 往下走25px */
+    margin-top: 25px;
+}
+
+/* 给表单设定一个高度 给他后代元素绝对定位 */
+.nav .site-search form{
+    width: 296px;
+    height: 50px;
+    position: relative;
+}
+
+.nav .site-search form .search-text{
+    /* 245px */
+    width: 223px;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    padding: 0 10px;
+    float: left;
+}
+/* 两个input框之间有间隙解决办法
+    将两个input框放一行
+    设置浮动
+*/
+.nav .site-search form .search-btn{
+    /* 这个按钮框中有间隙  给一个负margin-left消除 */
+    margin-left: -1px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    float: left;
+}
+
+.nav .site-search form .search_word{
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    font-size: 12px;
+    color: #757575;
+}
+/* icon图标 */
+.bigsearch{
+    font-family: "icomoon";
+    font-size: 25px;
+	font-style: normal;  /* 让倾斜的不倾斜 */
+    color: #757575;
+}
+.bigsearch{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+.nav .site-search form .search_word a{
+    /* 将a元素装换为块元素 */
+    display: inline-block;
+    /*让两个a元素之间有空格*/
+    margin-left: 5px ;
+    padding:0 5px;
+    background-color: #eee;
+}
+.nav .site-search form .search-btn{
+    color: transparent;
+}
+.nav .site-search form .search_word a:hover{
+    background-color: #ff8400;
+}
+.nav .site-search form .search-btn:hover{
+    background-color: #ff8400;
+}
+
+
+
+
+/* 小米侧边栏 */
+ .hero{
+    width: 1226px;
+    height: 460px;
+    margin: auto;
+    position: relative;
+    /* display: flex; */
+}
+/* 定位侧边栏 */
+.detail-category{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 242px;
+    /* 上下padding 20px */
+    padding: 20px 0;
+    /* 高度加padding会超出去  给一个border-box */
+    box-sizing: border-box;
+
+}
+.detail-category > li{
+    height: 42px;
+    line-height: 42px;
+    background: rgba(105,101,101,.6);  
+
+}
+.detail-category > li > a{
+    color: #fff;
+    margin-left: 30px;
+    display: inline-block;
+
+}
+.detail-category img{
+    width: 40px;
+    height: 40px;
+    float: left;
+
+}
+
+.detail-category > li:hover{
+    background-color: #ff6700;
+}
+/* 添加伪元素  让其右浮动 */
+/* 相对于ul定位用百分比比较好   相对于hero定位的话  宽度只能写死 */
+.detail-list{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 242px;
+    float: left;
+    font-size: 0;
+}
+.detail-category > li::after{
+    content: '>';
+    float: right;
+    margin-right: 10px;
+}
+/* 此处用了flex布局  不知道为什么hover不住  只能使用padding改变元素位置 脱离文档流 */
+.detail-category > li > div{
+    padding: 20px 0 0 20px;
+}
+.detail-category > li:hover div{
+    display: flex;
+    width: 984px;  
+    background-color: white;
+}
+.detail-list li{
+    width: 246px;
+    height: 73px;
+    font-size: 16px;
+}
+
+
+.hero .slider{
+    width: 1226px;
+    height: 100%;
+    margin:0 auto;
+    /* position: relative; */
+}
+.hero .slider > a{
+    display: block;
+    width: 1226px;
+}
+.hero .slider a img{
+    width: 1226px;
+}
+.hero .slider > span{
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    background:url(../img/icon-slides.png) no-repeat 0 0;
+    top: 50%;
+    /* 垂直居中 */
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.2;
+}
+.hero .slider .prev{
+    background-position: -93px 0;
+    left: 242px;
+}
+.hero .slider .prev:hover{
+    background-position: 0 0;
+}
+.hero .slider .next{
+    background-position: -121px 0;
+    right: 0; 
+}
+.hero .slider .next:hover{
+    background-position: -41px 0;
+}
+.hero .slider .slider-item{
+    position: absolute;
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    /* background-color: green; */
+    bottom: 20px;
+    right: 40px;
+
+}
+.slider-item > a{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0 15px;
+    background-color:rgba(255,255,255,.4);
+    border: 1px solid #fff;
+    border-color: rgba(255,255,255,.3);
+}
+/* 后续轮播图需要使用js */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************导航栏结束****************************************************************************************************/
