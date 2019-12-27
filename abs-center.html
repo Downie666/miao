@@ -111,6 +111,113 @@
         width: 50%;
         /* display: inline-block; */
       }
+
+                 /* flex布局 */
+/* div{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content:center;
+}
+section{
+  align-self:center;
+} */
+
+/*
+flex-margin布局
+ div{
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+section{
+  margin-right:auto;
+  background-color: red;
+  margin-top:auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  xmargin:auto;
+} */
+
+
+/* div{
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content:center;
+  align-items:center;
+}
+
+section{
+  background-color: red;
+} */
+
+
+/* 
+此方法需要折行
+div{
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content:center;
+  flex-wrap:wrap;
+  align-content:center;
+}
+
+
+
+section{
+  background-color: red;
+} */
+
+/* 
+此方法需要折行
+div{
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content:center;
+  flex-wrap:wrap;
+  align-content:space-around;
+}
+
+
+
+section{
+  background-color: red;
+} */
+
+/* 
+子比父大都能居中   不收缩的情况下依然能够居中
+div{
+  border: 5px solid;
+  margin:50px;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content:center;
+  flex-wrap:wrap;
+  align-content:space-around;
+}
+
+section{
+  opacity:0.3;
+  background-color: red;
+  flex-shrink:0;
+  width: 250px;
+  height: 250px;
+}
+ */
+
+
+ /* 一、transform（垂直且绝对居中）可以实现绝对居中
+子元素大也没关系
+left top 50%
+transform：translate(-50%, -50%); */
+
+
+
     </style>
   </head>
   <body>
@@ -131,5 +238,11 @@
       <section class="b"></section>
       <section class="c">f</section>
     </div>
+
+    <!--  flex布局
+    <div>
+      <section>aaa</section>
+    </div> 
+  -->
   </body>
 </html>

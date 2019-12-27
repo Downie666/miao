@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="x" id="ch0103/01">
+      var A = +prompt("");
+      var B = +prompt("");
+      console.log(A + B);
+    </script>
+    <script type="x" id="ch0103/02">
+      var A = +prompt("");
+      var B = +prompt("");
+      var C = +prompt("");
+      console.log((A + B)*C);
+    </script>
+    <script type="x" id="ch0103/03">
+      var A = +prompt("");
+      var B = +prompt("");
+      var C = +prompt("");
+      var x = (A + B) / C;
+      console.log(Math.floor(x));
+    </script>
+    <script type="x" id="ch0103/04">
+      var A = +prompt("");
+      var B = +prompt("");
+      console.log((Math.trunc(A / B)));
+      console.log(A % B);
+    </script>
+    <script type="x" id="ch0103/05">
+      var A = +prompt("");
+      var B = +prompt("");
+      var x = A / B;
+      console.log((x.toFixed(9)));
+    </script>
+    <script type="x" id="ch0103/06">
+      var A = +prompt("确诊数",10433);
+      var B = +prompt("死亡数",60);
+      var x = B / A;
+      console.log((x*100.00).toFixed(3) + "%");
+    </script>
+    <script type="x" id="ch0103/07">
+      var x = +prompt("",2.31);
+      var a = +prompt("",1.2);
+      var b = +prompt("",2);
+      var c = +prompt("",2);
+      var d = +prompt("",3);
+      console.log(((a * x * x * x ) + (b * x * x ) + (c * x) + d).toFixed(7));
+    </script>
+    <script type="x" id="ch0103/08">
+      var F = +prompt("");
+      var C = 5 * (F - 32) / 9;
+      console.log(C.toFixed(5));
+    </script>
+    <script type="x" id="ch0103/09">
+      var r = +prompt("",3.0);
+      var π = 3.14159;
+      var D = 2 * r;
+      var L = 2 * π * r;
+      var S = π * r * r;
+      console.log(D.toFixed(4));
+      console.log(L.toFixed(4));
+      console.log(S.toFixed(4));
+    </script>
+    <script type="x" id="ch0103/10">
+      var r1 = +prompt("",1);
+      var r2 = +prompt("",2);
+      var R = 1 / (1 /r1 + 1/r2);
+      console.log(R.toFixed(2));
+    </script>
+    <script type="x" id="ch0103/11">
+      var a = +prompt("");
+      var b = +prompt("");
+      var k = a % b;
+      console.log(k.toFixed(4));
+    </script>
+    <script type="x" id="ch0103/12">
+      var r = +prompt("");
+      var π = 3.14;
+      var V = 4 / 3 * (π * r * r * r);
+      console.log(V.toFixed(2));
+    </script>
+    <script type="x" id="ch0103/13">
+      var n = +prompt();
+      console.log(n%10,n/10%10,n/100);
+    </script>
+    <script type="x" id="ch0103/14">
+      var h = +prompt();
+      var r = +prompt();
+      var π = 3.14159;
+      var V = π * r * r * h;
+      var Ele = 20 * 1000 / V;
+      console.log(Math.ceil(Ele));
+    </script>
+    <script type="x" id="ch0103/15">
+      var n = +prompt();
+      var x = +prompt();
+      var y = +prompt();
+      console.log(n-Math.ceil(y/x));
+    </script>
+    <script type="x" id="ch0103/15">
+      var A = +prompt();
+      var B = +prompt();
+      console.log(n-Math.ceil(y/x));
+    </script>
+    <script type="x" id="ch0103/16">
+      var xa = +prompt();
+      var ya = +prompt();
+      var xb = +prompt();
+      var yb = +prompt();
+      console.log(Math.sqrt((xa-xb)*(xa-xb) + (ya-yb)*(ya-yb)).toFixed(3));
+    </script>
+    <script type="x" id="ch0103/17">
+      var x1 = +prompt();
+      var y1 = +prompt();
+      var x2 = +prompt();
+      var y2 = +prompt();
+      var x3 = +prompt();
+      var y3 = +prompt();
+      var a = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+      var b = Math.sqrt((x1-x3)*(x1-x3) + (y1-y3)*(y1-y3));
+      var c = Math.sqrt((x2-x3)*(x2-x3) + (y2-y3)*(y2-y3));
+      var p = ( a + b + c) / 2;
+      var S = Math.sqrt(p * ((p - a) * (p - b) * (p - c)));
+      console.log(S.toFixed(2));
+    </script>
+    <script type="x" id="ch0103/18">
+      var a1 = +prompt();
+      var a2 = +prompt();
+      var n = +prompt();
+      var d = a2 - a1;
+      console.log(a1 + (n - 1) * d);
+    </script>
+    <script type="x" id="ch0103/19">
+      var A = +prompt();
+      var B = +prompt();
+      console.log(A * B);
+    </script>
+    <script type="x" id="ch0103/19">
+      var A = +prompt();
+      var B = +prompt();
+      console.log(Math.pow(A,B));
+    </script>
+    <!-- Math.trunc可以取一个数的整数部分
+   Math.floor和Math.ceil分别是向下和向上取整
+圆的面积计算公式：S = π r2
+圆的周长计算公式：L = 2 π r
+圆的直径计算公式：D = 2 r
+an=a1+(n-1)*d。
+--></body>
+</html>
