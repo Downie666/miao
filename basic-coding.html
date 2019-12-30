@@ -140,16 +140,240 @@
       var B = +prompt();
       console.log(A * B);
     </script>
-    <script type="x" id="ch0103/19">
-      var A = +prompt();
-      var B = +prompt();
-      console.log(Math.pow(A,B));
+    <script type="x" id="ch0103/20">
+      var n = +prompt();
+      console.log(Math.pow(2,n));
     </script>
     <!-- Math.trunc可以取一个数的整数部分
    Math.floor和Math.ceil分别是向下和向上取整
 圆的面积计算公式：S = π r2
 圆的周长计算公式：L = 2 π r
 圆的直径计算公式：D = 2 r
-an=a1+(n-1)*d。
+an=a1+(n-1)*d。-->
+    <script id="ch0104/01">
+      var N = prompt("");
+      if (N > 0) {
+        console.log("positive");
+      } else if (N == 0) {
+        console.log("zero");
+      } else {
+        console.log("negative");
+      }
+    </script>
+    <script id="ch0104/02">
+      var N = prompt("");
+      console.log(Math.abs(N).toFixed(2));
+    </script>
+    <script id="ch0104/03">
+      var n = prompt("");
+      if (n % 2 !== 0) {
+        console.log("even");
+      } else {
+        console.log("odd");
+      }
+    </script>
+    <script id="ch0104/04">
+      var n = prompt("").charCodeAt();
+      if (n % 2 !== 0) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    </script>
+    <script id="ch0104/05">
+      var x = prompt("");
+      var y = prompt("");
+      if (x > y) {
+        console.log(">");
+      } else if (x == y) {
+        console.log("=");
+      } else {
+        console.log("<");
+      }
+    </script>
+    <script id="ch0104/06">
+      var x = prompt("");
+      if (x >= 10 && x <= 99) {
+        console.log("1");
+      } else {
+        console.log("0");
+      }
+    </script>
+    <script id="ch0104/06">
+      var x = prompt("");
+      if (x >= 10 && x <= 99) {
+        console.log("1");
+      } else {
+        console.log("0");
+      }
+    </script>
+    <script id="ch0104/07">
+      var x = prompt("");
+      var y = prompt("");
+      if (x >= 10 && x < 20) {
+        console.log("1");
+      } else {
+        console.log("0");
+      }
+    </script>
+    <script id="ch0104/08">
+      var x = prompt("");
+      if (x % 3 == 0 && x % 5 == 0) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    </script>
+    <script id="ch0104/09">
+      var x = prompt("");
+      if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0) {
+        console.log(" 3" + " 5" + " 7");
+      } else if (!(x % 3 == 0 && x % 5 == 0 && x % 7 == 0)) {
+        console.log("n");
+      }
+    </script>
+    <script id="ch0104/10">
+      var x = prompt("");
+      var y = prompt("");
+      if (x >= 60 && y <= 60) {
+        console.log(1);
+      } else {
+        console.log(0);
+      }
+    </script>
+    <script id="ch0104/11">
+      var x = prompt("");
+      if (x == 1 || x == 3 || x == 5) {
+        console.log("NO," + "今天我要上课，明天再约");
+      } else {
+        console.log("YES," + "我们去看展览吧");
+      }
+    </script>
+    <script id="ch0104/12">
+      var n = prompt("");
+      var a = n / 3.0 + 50;
+      var b = n / 1.2;
+      if (a < b) {
+        console.log("Bike");
+      } else if (a > b) {
+        console.log("Walk");
+      } else {
+        console.log("All");
+      }
+    </script>
+    <script id="ch0104/13">
+      var x = prompt("");
+      if (x >= 10 && x < 20) {
+        console.log((x / 2 - 1.5).toFixed(3));
+      } else if (x >= 5 && x < 10) {
+        console.log((2 - 1.5 * (x - 3) * (x - 3)).toFixed(3));
+      } else {
+        console.log((-x + 2.5).toFixed(3));
+      }
+    </script>
+    <script id="ch0104/14">
+      var x = Number(prompt());
+      var y = prompt();
+      var p = Math.ceil(((x - 1000) / 500) * 4 + 8);
+      if (y == "y") {
+        console.log("加急");
+      } else {
+        console.log("不加急");
+      }
+    </script>
+
+    <script id="ch0104/15">
+      var a = +prompt();
+      var b = +prompt();
+      var c = +prompt();
+      var max;
+      if (a > b) {
+        max = a;
+      } else {
+        max = b;
+        if (max > c) {
+          console.log(max);
+        } else {
+          console.log(c);
+        }
+      }
+    </script>
+
+    <script id="ch0104/16">
+      //利用两边之和大于第三边  两边之差小于第三边
+      var a = Number(prompt());
+      var b = Number(prompt());
+      var c = Number(prompt());
+      if (a + b > c && b + c > a && a + c > b ) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    </script>
+
+    <script id="ch0104/17">
+      var year = Number(prompt());
+      if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        console.log("Y");
+      } else {
+        console.log("N");
+      }
+    </script>
+
+    <script id="ch0104/18">
+      var x = Number(prompt());
+      var y = Number(prompt());
+      if (x >= -1.0 && x <= 1.0 && y >= -1.0 && y <= 1.0) {
+        console.log("yes");
+      } else {
+        console.log("no");
+      }
+    </script>
+
+    <script id="ch0104/19">
+      var x = Number(prompt());
+      var y = Number(prompt());
+      var a = prompt();
+      if (a == "+") {
+        console.log(x + y);
+      } else if (a == "-") {
+        console.log(x - y);
+      } else if (a == "*") {
+        console.log(x * y);
+      } else if (a == "/") {
+        if (y == 0) {
+          console.log("Divided by zero!");
+        } else {
+          console.log(x / y);
+        }
+      } else {
+        console.log("Invalid operator!");
+      }
+    </script>
+
+    <script id="ch0104/20">
+      var a = prompt("请输入一个不为0数字");
+      var b = prompt("请输入一个数字");
+      var c = prompt("请输入一个数字");
+      var delta = b * b - 4 * a * c;
+      var x1 = (-b - Math.sqrt(delta)) / (2 * a);
+      var x2 = (-b + Math.sqrt(delta)) / (2 * a);
+      if (delta == 0) {
+        console.log((x1 = x2));
+      }else if(delta > 0){
+          console.log(x1 > x2);
+      }else{
+          console.log(x1 < x2);
+      }
+    </script>
+
+    <script id="ch0104/21">
+      var n = Number(prompt());
+      var x = Number(prompt());
+      var y = Number(prompt());
+      if (x / n != 0) {
+        console.log(n - Math.ceil(y / x));
+      }
+    </script>
 --></body>
 </html>
