@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>画图</title>
+    <style>
+      canvas {
+        border: 2px solid #f0f;
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="400" height="300"></canvas>
+  </body>
+  <script>
+    var canvas = document.querySelector("canvas");
+    canvas.style.imageRendering = "pixelated";
+    var ctx = canvas.getContext("2d");
+
+    function dot(x, y, color = "black") {
+      ctx.fillStyle = color;
+      ctx.fillRect(x, y, 1, 1);
+    }
+    /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+  </script>
+  <script>
+    function line(x1, y1, x2, y2) {
+      ctx.strokeStyle = "black";
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    }
+    // YOUR CODE GOES BELOW
+    for (var x = 0; x < 400; x++) {
+      dot(x, 20, "hsl(0,0,0)"); //x 方向下偏移20像素 rgba颜色‘hsl(0,0,0)’
+    }
+    for (var x = 0; x < 400; x += 2) {
+      dot(x, 40, "hsl(0,0,0)"); //x 方向下偏移40像素 rgba颜色‘hsl(0,0,0)’
+    }
+
+    for (var x = 0; x < 400; x += 4) {
+      dot(x, 60, "red");
+      dot(x + 1, 60, "red"); //x 方向下偏移60像素
+    }
+
+    // for (var x = 0; x < 400 ; x+=5) {
+    //   dot (x, 80, 'red');
+    //   dot (x + 1, 60, 'red');
+    //   dot (x + 2, 60, 'red');   //x 方向下偏移60像素
+    // }
+    // for (var x = 0; x < 400; x +=35) {
+    //   for (var xx = 0; xx < 15; xx++ ) {
+    //     dot(x + xx,100,'black');
+    //   }
+    // }
+    for (var x = 0; x < 400; x++) {
+      //让x每次走一步
+      // x 在 0 -400 之间   x % 35 在0-34 0-34 0-34……之间
+      if (x % 35 < 15) {
+        dot(x, 100, "green");
+      }
+    }
+
+    for (var c = 0; c < 300; c++) {
+      dot(c, c, "aqua"); // x y 同步增加
+    }
+    for (var c = 0; c < 400; c++) {
+      dot(c, ((c / 400) * 300) | 0, "aqua"); // |0  取整
+    }
+
+    for (var x = 50; x < 100; x++) {
+      dot(x, 120, "red");
+      dot(x, 170, "red");
+    }
+
+    for (var y = 120; y <= 170; y++) {
+      dot(50, y, "red");
+      dot(100, y, "red");
+    }
+
+    for (var x = 50; x < 100; x++) {
+      for (var y = 200; y < 250; y++) {
+        dot(x, y);
+      }
+    }
+
+    for (var r = 0; r < 256; r++) {
+      for (var b = 0; b < 256; b++) {
+        dot(r / 3 + 150, b / 3 + 150, "rgb(" + r + ",255," + b + ")");
+      }
+    }
+
+    // x^2 + y ^2 = 1   圆公式
+    for (var x = -100; x <= 100; x++) {
+      var y = Math.sqrt(10000 - x * x);
+      dot(x + 200, y + 150); //下半个圆
+      dot(x + 200, -y + 150); //上半个圆
+      line(x + 200, y + 150, x + 200, -y + 150);
+    }
+    for (var y = -100; y <= 100; y++) {
+      var x = Math.sqrt(10000 - y * y);
+      dot(x + 200, y + 150); //下半个圆
+      dot(-x + 200, y + 150); //上半个圆
+    }
+
+    for (var z = 0; z < 2 * Math.PI; z += 0.03) {
+      var x = 50 * Math.cos(z);
+      var y = 50 * Math.sin(z);
+      dot(x + 200, y + 150);
+      line(200, 150, x + 200,y + 150);
+    }
+
+    for (var x = 0; x < 400; x++) {
+      var y =100 * Math.sin(x * Math.PI/ 100) / Math.PI;   //放大100倍
+      dot(x , y + 150, 'red');
+    }
+  </script>
+</html>
