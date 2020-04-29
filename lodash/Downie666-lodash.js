@@ -1,4 +1,4 @@
-var Downie = {
+var downie666 = {
     isNaN: function(val) {
         if (val !== val) {
             return true
