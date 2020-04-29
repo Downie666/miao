@@ -1,4 +1,4 @@
-var tqzifeiyu = {
+var downie666 = {
     isNull: function(val) {
         if (val === null) {
             return true
