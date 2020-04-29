@@ -1,13 +1,13 @@
 var downie666 = {
-    isNaN: function(val) {
-        if (val !== val) {
+    isNull: function(val) {
+        if (val === null) {
             return true
         } else {
             return false
         }
     },
-    isNull: function(val) {
-        if (val === null) {
+    isNaN: function(val) {
+        if (val !== val) {
             return true
         } else {
             return false
