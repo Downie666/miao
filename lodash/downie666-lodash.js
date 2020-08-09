@@ -12,7 +12,7 @@ var downie666 = {
         } else {
             return false
         }
-    }
+    },
 }
 
 chunk,compact
